@@ -1,11 +1,16 @@
 a {
-    color: var(--color-subheading);
+    color: var(--color-heading);
     font-family: var(--font-subheading);
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 2.7px;
     text-decoration: none;
     cursor: pointer;
-    margin: 0 3.125rem;
+    margin: 0 0.1rem;
+}
+
+img {
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
 strong {
@@ -13,13 +18,12 @@ strong {
     margin-right: 5px;
 }
 
-hr.navbar__hr {
+hr {
     border: 0px;
     height: 1px;
     background-color: gray;
     opacity: 0.5;
-    width: 30rem;
-    margin-right: -8rem;
+    margin-right: -2rem;
     z-index: 1;
 }
 
@@ -32,26 +36,77 @@ div.navbar__nav--blur {
     background:rgba(255, 255, 255, 0.03);
 }
 
-.navbar--flex-container {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
+.navbar2--hide-items {
+    /* mobile first */
+    display: none;
 }
 
 .nav__links {
-    margin: 3rem 8rem;
+    margin: 3rem;
 }
 
-@media only screen and (min-width: 1800px) {
-    /* For desktop: */
-    hr.navbar__hr {
-        border: 0px;
-        height: 1px;
-        background-color: gray;
-        opacity: 0.5;
-        width: 42rem;
-        margin-right: -8rem;
-        z-index: 1;
+/* when width gets larger than 768px */
+@media only screen and (min-width: 769px) {
+    /* For Small screens, laptops: */
+    .navbar--flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    /* show hidden navbar2 */
+    .navbar2--hide-items {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    /* make hr grow or shrink */
+    .navbar2__hr--flex-item {
+        flex: 1;
+    }
+
+    /* make nav grow but not shrink */
+    .navbar2__nav--flex-item {
+        flex: 2 0;
+    }
+
+    .nav__links--flex {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* remove img margin for Small screens, laptops: */
+    img {      
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .navbar--flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+   /* show hidden navbar2 */
+   .navbar2--hide-items {
+       display: flex;
+       align-items: center;
+   }
+
+   strong {
+       display: none;
+   }
+
+   div.nav {
+       min-width: 30rem;
+   }
+
+   .nav__links--flex{
+       display: flex;
+       justify-content: space-between;
+   }
 }
