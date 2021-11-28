@@ -5,7 +5,10 @@ import logo from '../../assets/shared/logo.svg'
 function Navbar() {
     return (
         <div className="navbar navbar--flex-container">
-            <img src={logo} alt='logo' />
+            <div className='navbar__img-container--flex-item'>
+                <img src={logo} alt='logo' />
+            </div>
+            
             <div className="navbar2--hide-items">
                 <hr className='navbar2__hr--flex-item'/>
                 <div className='nav navbar__nav--blur navbar2__nav--flex-item'>

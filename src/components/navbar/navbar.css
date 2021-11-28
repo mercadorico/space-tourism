@@ -37,12 +37,8 @@ div.navbar__nav--blur {
 }
 
 .navbar2--hide-items {
-    /* mobile first */
+    /* mobile first -- hide navbar in mobile*/
     display: none;
-}
-
-.nav__links {
-    margin: 3rem;
 }
 
 /* when width gets larger than 768px */
@@ -54,19 +50,19 @@ div.navbar__nav--blur {
         align-items: center;
     }
 
-    /* show hidden navbar2 */
+    /* show hidden navbar2 and set flex grow/shrink value as flex item of navbar flex container*/
     .navbar2--hide-items {
         display: flex;
         align-items: center;
         flex: 1;
     }
 
-    /* make hr grow or shrink */
+    /* make hr grow or shrink by setting flex value as flex item of navbar2 flex container */
     .navbar2__hr--flex-item {
         flex: 1;
     }
 
-    /* make nav grow but not shrink */
+    /* make nav grow but not shrink as flex item of navbar2 flex container*/
     .navbar2__nav--flex-item {
         flex: 2 0;
     }
@@ -74,6 +70,11 @@ div.navbar__nav--blur {
     .nav__links--flex {
         display: flex;
         justify-content: space-around;
+    }
+
+    /* set margina around nav-links */
+    .nav__links {
+        margin: 3rem;
     }
 
     /* remove img margin for Small screens, laptops: */
@@ -84,29 +85,44 @@ div.navbar__nav--blur {
     }
 }
 
+/* when width gets larger than 481px and smaller than 768px */
 @media only screen and (max-width: 768px) and (min-width: 481px) {
+    /* For Small iPads, tablets: */
     .navbar--flex-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-   /* show hidden navbar2 */
+   /* show hidden navbar2 and set flex grow value as flex item of navbar flex container*/
    .navbar2--hide-items {
        display: flex;
        align-items: center;
+       flex: 2 0;
    }
 
+   /* set flex value of image container flex-item */
+   .navbar__img-container--flex-item {
+       flex: 1;
+   }
+
+   /* set flex value of navbar2 container flex-item */
+   .navbar2__nav--flex-item {
+        flex: 1;
+    }
+
+    /* remove numbers on links */
    strong {
        display: none;
    }
 
-   div.nav {
-       min-width: 30rem;
-   }
+   /* remove left and right margin */
+   .nav__links {
+        margin: 3rem 0;
+    }
 
    .nav__links--flex{
        display: flex;
-       justify-content: space-between;
+       justify-content: space-around;
    }
 }
