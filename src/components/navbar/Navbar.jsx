@@ -1,12 +1,17 @@
 import React from 'react';
 import './navbar.css';
 import logo from '../../assets/shared/logo.svg'
+import menu from '../../assets/shared/icon-hamburger.svg';
 
 function Navbar() {
     return (
         <div className="navbar navbar--flex-container">
             <div className='navbar__img-container--flex-item'>
                 <img src={logo} alt='logo' />
+            </div>
+
+            <div className='navbar__menu navbar__menu--display'>
+                <img src={menu} alt='navbar__menu'/>
             </div>
             
             <div className="navbar2--hide-items">
