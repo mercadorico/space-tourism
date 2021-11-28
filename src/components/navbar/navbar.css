@@ -14,6 +14,13 @@ img {
     margin-right: 2rem;
 }
 
+img.menu-logo {
+    margin-left: 2rem;
+    /* modify to 3rem to align menu-logo with the logo */
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
 strong {
     color: var(--color-heading);
     margin-right: 5px;
@@ -32,16 +39,47 @@ hr {
 .navbar--flex-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-div.navbar__nav--blur {
+.navbar__nav--blur {
     /* blur nav div */
 	-webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     
     /* give opacity to bg color only */
     background:rgba(255, 255, 255, 0.03);
+}
+
+.navbar__menu--blur {
+    /* blur nav div */
+	-webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    
+    /* give opacity to bg color only */
+    background:rgba(255, 255, 255, 0.05);
+}
+
+/* set navbar menu as flex container and position it absolute so it do not interfere with other component/elements*/
+.navbar__menu--flex-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    /* set to 100% to extend to bottom*/
+    min-height: 100%;
+}
+
+.menu__links--flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 4rem 0 2rem;
+    row-gap: 2.5rem;
+}
+
+/* keep close icon in its original position when toggling menu-icon */
+.navbar__menu--flex-item {
+    align-self: flex-end;
 }
 
 .navbar2--hide-items {
