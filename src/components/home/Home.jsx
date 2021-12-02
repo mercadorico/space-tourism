@@ -4,7 +4,12 @@ import './home.css';
 function Home() {
     return (
         <div className="home">
-            Home
+            <div className='home__firstSentence'>SO, YOU WANT TO TRAVEL TO</div>
+            <div className='home__space'>SPACE</div>
+            <div className='home__paragraph'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</div>
+            <div className='home__explore--flex-container'>
+                <div className='home__explore--flex-container2'>EXPLORE</div>
+            </div>
         </div>
     )
 }

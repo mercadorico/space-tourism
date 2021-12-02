@@ -1,0 +1,46 @@
+
+.home__firstSentence {
+    color: var(--color-subheading);
+    font-family: var(--font-text);
+    font-size: 18px;
+    letter-spacing: 4.75px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.home__space {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 100px;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.home__paragraph {
+    color: var(--color-subheading);
+    font-family: var(--font-text);
+    font-size: 18px;
+    letter-spacing: 0.75px;
+    text-align: center;
+    margin: 0 2rem;
+    line-height: 150%;
+}
+
+.home__explore--flex-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.home__explore--flex-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    color: black;
+    font-family: var(--font-heading);
+    background-color: white;
+    font-size: 32px;
+    border-radius: 50%;
+}
