@@ -8,9 +8,6 @@ const App = () => {
         <div className="App">
             <Navbar />
             <Home />
-            <Crew />
-            <Destination />
-            <Technology />
         </div>
     )
 }
