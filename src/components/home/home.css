@@ -68,7 +68,7 @@
 }
 
 /* when width gets larger than 768px */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     .home--flex-container {
         flex-direction: row;
         height: 63vh;
@@ -107,27 +107,35 @@
     }
 }
 
-@media only screen and (min-width: 1360px) {
+/* when width gets larger than 1760px */
+@media only screen and (min-width: 1760px) {
     .home--flex-container {
-        margin: 0 15rem;
+        margin: 0 10rem;
     }
 
     .home__firstSentence {
-        font-size: 2em;
+        font-size: 35px;
         text-align: start;
     }
 
     .home__space {
-        font-size: 9.4em;
+        font-size: 200px;
         text-align: start;
+        margin: 2rem 0;
     }
 
     .home__paragraph {
-        font-size: 1.25rem;
+        font-size: 24px;
         text-align: start;
         margin-left: 0;
-        max-width: 24em;
+        max-width: 25em;
         line-height: 180%;
         letter-spacing: 1px;
+    }
+
+    .home__explore--flex-container2 {
+        max-width: 350px;
+        max-height: 350px;
+        font-size: 40px;
     }
 }
