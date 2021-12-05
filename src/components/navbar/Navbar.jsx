@@ -10,16 +10,16 @@ function Menu() {
     return (
         <>
             <Link to="/">
-                <a href='/'> <strong>00</strong> HOME</a>
+                 <strong>00</strong> HOME
             </Link>
             <Link to="/destination">
-                <a href='/destination'> <strong>01</strong> DESTINATION</a>
+                <strong>01</strong> DESTINATION
             </Link>
             <Link to="/crew">
-                <a href='/crew'> <strong>02</strong> CREW</a>
+                <strong>02</strong> CREW
             </Link>
             <Link to="/technology">
-                <a href='/technology'> <strong>03</strong> TECHNOLOGY</a>
+                <strong>03</strong> TECHNOLOGY
             </Link>            
         </>
     );
