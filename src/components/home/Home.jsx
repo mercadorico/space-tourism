@@ -2,6 +2,11 @@ import React from 'react';
 import './home.css';
 
 function Home() {
+
+    // Remove class and add new one to render correct background image
+    document.body.classList.remove("destination", "crew", "technology");
+    document.body.classList.add("home");
+
     return (
         <div className="home--flex-container">
             <div className='home__text'>

@@ -1,0 +1,50 @@
+/* mobile first approach */
+body.technology { 
+    background: url('../../assets/technology/background-technology-mobile.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* when width gets larger than 481px and smaller than 768px */
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    /* For Small iPads, tablets: */
+    body.technology {
+        background: url('../../assets/technology/background-technology-tablet.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+/* when width gets larger than 768px */
+@media only screen and (min-width: 769px) {
+    /* For laptop, desktops */
+    body.technology {
+        background: url('../../assets/technology/background-technology-desktop.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        padding-left: 3.475rem;
+        padding-top: 2.5rem;
+    }
+}
+
+/* when width gets larger than 1900px */
+@media only screen and (min-width: 1900px) {
+    /* For large desktop, laptop */
+    body.technology {
+        background: url('../../assets/technology/background-technology-desktop.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        padding-left: 3.475rem;
+        padding-top: 2.5rem;
+    }
+}

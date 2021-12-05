@@ -1,3 +1,11 @@
+/* mobile first approach */
+body.home { 
+    background: url('../../assets/home/background-home-mobile.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 .home--flex-container {
     display: flex;
@@ -51,6 +59,14 @@
 /* when width gets larger than 481px and smaller than 768px */
 @media only screen and (max-width: 768px) and (min-width: 481px) {
     /* For Small iPads, tablets: */
+    body.home {
+        background: url('../../assets/home/background-home-tablet.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
     .home__firstSentence {
         margin-top: 3rem;
         font-size: 20px;
@@ -69,6 +85,17 @@
 
 /* when width gets larger than 768px */
 @media only screen and (min-width: 769px) {
+    body.home {
+        background: url('../../assets/home/background-home-desktop.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        padding-left: 3.475rem;
+        padding-top: 2.5rem;
+    }
+
     .home--flex-container {
         flex-direction: row;
         height: 63vh;
@@ -107,8 +134,19 @@
     }
 }
 
-/* when width gets larger than 1760px */
-@media only screen and (min-width: 1760px) {
+/* when width gets larger than 1900px */
+@media only screen and (min-width: 1900px) {
+    body.home {
+        background: url('../../assets/home/background-home-desktop.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        padding-left: 3.475rem;
+        padding-top: 2.5rem;
+    }
+
     .home--flex-container {
         margin: 0 10rem;
     }
