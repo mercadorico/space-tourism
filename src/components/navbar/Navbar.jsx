@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { Link } from "react-router-dom";
+
 import './navbar.css';
 import logo from '../../assets/shared/logo.svg'
 import menu from '../../assets/shared/icon-hamburger.svg';
@@ -7,10 +9,18 @@ import close from '../../assets/shared/icon-close.svg';
 function Menu() {
     return (
         <>
-            <a href='/'> <strong>00</strong> HOME</a>
-            <a href='/destination'> <strong>01</strong> DESTINATION</a>
-            <a href='/crew'> <strong>02</strong> CREW</a>
-            <a href='/technology'> <strong>03</strong> TECHNOLOGY</a>
+            <Link to="/">
+                <a href='/'> <strong>00</strong> HOME</a>
+            </Link>
+            <Link to="/destination">
+                <a href='/destination'> <strong>01</strong> DESTINATION</a>
+            </Link>
+            <Link to="/crew">
+                <a href='/crew'> <strong>02</strong> CREW</a>
+            </Link>
+            <Link to="/technology">
+                <a href='/technology'> <strong>03</strong> TECHNOLOGY</a>
+            </Link>            
         </>
     );
 }
