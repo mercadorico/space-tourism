@@ -6,6 +6,68 @@ body.destination {
     -o-background-size: cover;
     background-size: cover;
 }
+.destination__flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+}
+.destination__heading {
+    font-family: var(--font-subheading);
+    color: var(--color-heading);
+    letter-spacing: 2.7px;
+}
+
+.destination__img {
+    width: 12.5rem;
+}
+
+button {
+    background: none;
+    border: none;
+    font-family: var(--font-subheading);
+    color: var(--color-subheading);
+    letter-spacing: 2.36px;
+    margin: 0 0.5rem;
+}
+
+.destination__name {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-size: 3.5rem;
+}
+
+.destination_description {
+    font-family: var(--font-subheading);
+    color: var(--color-subheading);
+    font-size: 0.94rem;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 150%;
+}
+
+.destination__hr {
+    z-index: -1;
+    width: 100%;
+    margin: 0;
+}
+
+.destination__avg-distance > p, .destination__travel-time > p{
+    font-family: var(--font-subheading);
+    color: var(--color-subheading);
+    font-size: 0.94rem;
+    text-align: center;
+}
+
+.destination__avg-distance > div, .destination__travel-time > div{
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-size: 1.75rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
 
 /* when width gets larger than 481px and smaller than 768px */
 @media only screen and (max-width: 768px) and (min-width: 481px) {

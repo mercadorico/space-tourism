@@ -32,7 +32,7 @@ function Navbar() {
         <div className="navbar navbar--flex-container">
             {/* image container */}
             <div className='navbar__img-container--flex-item'>
-                <img src={logo} alt='logo' />
+                <img className='navbar__img' src={logo} alt='logo' />
             </div>
 
             {/* navbar menu for mobile */}
@@ -40,8 +40,8 @@ function Navbar() {
                 <div className='navbar__menu--flex-item'>
                     {
                         toggleMenu ? 
-                            <img src={close} onClick = {() => {setToggleMenu(false)}} className='menu-logo' alt='navbar__menu'/> 
-                            : <img src={menu} onClick = {() => {setToggleMenu(true)}} className='menu-logo' alt='navbar__menu'/>
+                            <img src={close} onClick = {() => {setToggleMenu(false)}} className='menu-logo navbar__img' alt='navbar__menu'/> 
+                            : <img src={menu} onClick = {() => {setToggleMenu(true)}} className='menu-logo navbar__img' alt='navbar__menu'/>
                     }
                 </div>
                 {
