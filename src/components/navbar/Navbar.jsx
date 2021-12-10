@@ -10,16 +10,16 @@ function Menu() {
     return (
         <>
             <Link to="/">
-                 <strong>00</strong> HOME
+                 <strong className='navbar__num'>00</strong> HOME
             </Link>
             <Link to="/destination">
-                <strong>01</strong> DESTINATION
+                <strong className='navbar__num'>01</strong> DESTINATION
             </Link>
             <Link to="/crew">
-                <strong>02</strong> CREW
+                <strong className='navbar__num'>02</strong> CREW
             </Link>
             <Link to="/technology">
-                <strong>03</strong> TECHNOLOGY
+                <strong className='navbar__num'>03</strong> TECHNOLOGY
             </Link>            
         </>
     );

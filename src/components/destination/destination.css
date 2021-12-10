@@ -101,6 +101,63 @@ button {
        -o-background-size: cover;
         background-size: cover;
     }
+
+    .destination__flex-container {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 2rem;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 80vh;
+    }
+
+    .destination__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .destination__heading {
+        letter-spacing: 3.3px;
+        font-size: 1.25rem;
+        align-self: flex-start;
+    }
+
+    .destination__img {
+        width: 18.75rem;
+    }
+
+    button {
+        font-size: 1rem;
+        margin: 0 1.5rem;
+    }
+
+    .destination__name {
+        font-size: 5rem;
+    }
+
+    .destination_description {
+        font-size: 1rem;
+        margin: 0 5rem;
+    }
+
+    .destination__hr {
+        margin: 2rem 0;
+    }
+
+    .destination__lower {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    .destination__avg-distance > p, .destination__travel-time > p{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+
 }
 
 /* when width gets larger than 768px */
@@ -115,6 +172,58 @@ button {
 
         padding-left: 3.475rem;
         padding-top: 2.5rem;
+    }
+
+    .destination__flex-container {
+        flex-direction: row;
+        justify-content: space-around;
+        min-height: 60vh;
+    }
+
+    .destination__heading {
+        letter-spacing: 4px;
+        font-size: 1.55rem;
+        align-self: flex-start;
+    }
+
+    .destination__body {
+        align-items: flex-start;
+    }
+
+    button {
+        font-size: 1.2rem;
+        margin: 0 1.5rem 0 0;
+    }
+
+    .destination__img {
+        width: 27rem;
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+
+    .destination__name {
+        font-size: 6.25rem;
+    }
+
+    .destination_description {
+        width: 24rem;
+        text-align: start;
+        letter-spacing: 1.5px;
+    }
+
+    .destination__lower {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .destination__avg-distance > p, .destination__travel-time > p{
+        text-align: start;
+    }
+
+    .destination__avg-distance, .destination__travel-time {
+        margin-right: 3rem;
     }
 }
 

@@ -130,6 +130,10 @@ hr {
         margin-right: 2rem;
     }
 
+    img.navbar__img {
+        margin-top: 0;
+    }
+
     /* remove menu bar */
     .navbar__menu--display {
         display: none;
@@ -163,7 +167,7 @@ hr {
     }
 
     /* remove numbers on links */
-   strong {
+   strong.navbar__num {
        display: none;
    }
 
@@ -180,5 +184,9 @@ hr {
    /* remove menu bar */
    .navbar__menu--display {
         display: none;
+    }
+
+    img.navbar__img {
+        margin-top: 0;
     }
 }
