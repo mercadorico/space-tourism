@@ -92,7 +92,7 @@ button {
 }
 
 /* when width gets larger than 481px and smaller than 768px */
-@media only screen and (max-width: 768px) and (min-width: 481px) {
+@media only screen and (max-width: 1023px) and (min-width: 481px) {
     /* For Small iPads, tablets: */
     body.destination {
         background: url('../../assets/destination/background-destination-tablet.jpg') no-repeat center center fixed; 
@@ -161,7 +161,7 @@ button {
 }
 
 /* when width gets larger than 768px */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
     /* For laptop, desktops */
     body.destination {
         background: url('../../assets/destination/background-destination-desktop.jpg') no-repeat center center fixed; 
@@ -178,6 +178,8 @@ button {
         flex-direction: row;
         justify-content: space-around;
         min-height: 60vh;
+        margin-top: 3rem;
+        align-items: flex-end;
     }
 
     .destination__heading {
@@ -186,19 +188,21 @@ button {
         align-self: flex-start;
     }
 
+    .destination__img {
+        width: 27rem;
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+
     .destination__body {
         align-items: flex-start;
+        min-height: 55vh;
+        justify-content: space-between;
     }
 
     button {
         font-size: 1.2rem;
         margin: 0 1.5rem 0 0;
-    }
-
-    .destination__img {
-        width: 27rem;
-        margin-top: 3rem;
-        margin-left: 3rem;
     }
 
     .destination__name {
@@ -228,7 +232,7 @@ button {
 }
 
 /* when width gets larger than 1900px */
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-width: 1800px) {
     /* For large desktop, laptop */
     body.destination {
         background: url('../../assets/destination/background-destination-desktop.jpg') no-repeat center center fixed; 
@@ -239,5 +243,43 @@ button {
 
         padding-left: 3.475rem;
         padding-top: 2.5rem;
+    }
+
+    .destination__flex-container {
+        margin: 3rem 4.5rem 0 4.5rem;
+    }
+
+    .destination__heading {
+        font-size: 1.75rem;
+    }
+
+    .destination__img {
+        width: 31.25rem;
+        margin-top: 4rem;
+        margin-left: 6rem;
+    }
+
+    .destination__body {
+        margin-right: 5rem;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+
+    .destination__name {
+        font-size: 7rem;
+    }
+
+    .destination_description {
+        font-size: 1.25rem;
+    }
+
+    .destination__avg-distance > p, .destination__travel-time > p{
+        font-size: 1.15rem;
+    }
+
+    .destination__avg-distance > div, .destination__travel-time > div{
+        font-size: 2rem;
     }
 }
