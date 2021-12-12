@@ -12,7 +12,7 @@ body.destination {
     flex-direction: column;
     margin: 1rem 2rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     min-height: 80vh;
 }
 
@@ -91,8 +91,8 @@ button {
     text-align: center;
 }
 
-/* when width gets larger than 481px and smaller than 768px */
-@media only screen and (max-width: 1023px) and (min-width: 481px) {
+/* when width gets larger than 481px and smaller than 1304px */
+@media only screen and (max-width: 1304px) and (min-width: 481px) {
     /* For Small iPads, tablets: */
     body.destination {
         background: url('../../assets/destination/background-destination-tablet.jpg') no-repeat center center fixed; 
@@ -100,15 +100,6 @@ button {
        -moz-background-size: cover;
        -o-background-size: cover;
         background-size: cover;
-    }
-
-    .destination__flex-container {
-        display: flex;
-        flex-direction: column;
-        margin: 1rem 2rem;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 80vh;
     }
 
     .destination__header {
@@ -160,8 +151,8 @@ button {
 
 }
 
-/* when width gets larger than 768px */
-@media only screen and (min-width: 1024px) {
+/* when width gets larger than 1305px */
+@media only screen and (min-width: 1305px) {
     /* For laptop, desktops */
     body.destination {
         background: url('../../assets/destination/background-destination-desktop.jpg') no-repeat center center fixed; 
@@ -231,7 +222,7 @@ button {
     }
 }
 
-/* when width gets larger than 1900px */
+/* when width gets larger than 1800px */
 @media only screen and (min-width: 1800px) {
     /* For large desktop, laptop */
     body.destination {

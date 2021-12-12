@@ -13,8 +13,7 @@ body.home {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* background-color: black; */
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .home__firstSentence {
@@ -57,7 +56,7 @@ body.home {
 }
 
 /* when width gets larger than 481px and smaller than 768px */
-@media only screen and (max-width: 1305px) and (min-width: 481px) {
+@media only screen and (max-width: 1304px) and (min-width: 481px) {
     /* For Small iPads, tablets: */
     body.home {
         background: url('../../assets/home/background-home-tablet.jpg') no-repeat center center fixed; 
@@ -69,22 +68,22 @@ body.home {
 
     .home__firstSentence {
         margin-top: 3rem;
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .home__space {
-        font-size: 150px;
+        font-size: 9.4rem;
     }
 
     .home__paragraph {
-        margin: 0 10rem;
+        margin: 0 5rem;
         letter-spacing: 1.5px;
         line-height: 180%;
     }
 }
 
-/* when width gets larger than 768px */
-@media only screen and (min-width: 1306px) {
+/* when width gets larger than 1305px */
+@media only screen and (min-width: 1305px) {
     body.home {
         background: url('../../assets/home/background-home-desktop.jpg') no-repeat center center fixed; 
         -webkit-background-size: cover;
@@ -135,7 +134,7 @@ body.home {
     }
 }
 
-/* when width gets larger than 1900px */
+/* when width gets larger than 1800px */
 @media only screen and (min-width: 1800px) {
     body.home {
         background: url('../../assets/home/background-home-desktop.jpg') no-repeat center center fixed; 

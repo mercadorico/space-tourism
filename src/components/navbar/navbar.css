@@ -5,7 +5,7 @@ a {
     letter-spacing: 2.7px;
     text-decoration: none;
     cursor: pointer;
-    margin: 0 0.1rem;
+    margin: 0 0.5rem;
 }
 
 img.navbar__img {
@@ -87,8 +87,51 @@ hr {
     display: none;
 }
 
-/* when width gets larger than 768px */
-@media only screen and (min-width: 769px) {
+/* when width gets larger than 481px and smaller than 1304px */
+@media only screen and (max-width: 1304px) and (min-width: 481px) {
+    /* For Small iPads, tablets: */
+    .navbar--flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+   /* show hidden navbar2 and set flex grow value as flex item of navbar flex container*/
+   .navbar2--hide-items {
+       display: flex;
+       align-items: center;
+       /* flex: 1; */
+       width: 60%;
+   }
+
+   /* set flex value of navbar2 container flex-item */
+   .navbar2__nav--flex-item {
+        flex: 2 0;
+    }
+
+    /* remove numbers on links */
+   strong.navbar__num {
+       display: none;
+   }
+
+   /* remove left and right margin */
+   .nav__links {
+        margin: 3rem 0.5rem;
+    }
+
+   .nav__links--flex{
+       display: flex;
+       justify-content: space-around;
+   }
+
+   /* remove menu bar */
+   .navbar__menu--display {
+        display: none;
+    }
+}
+
+/* when width gets larger than 1305px */
+@media only screen and (min-width: 1305px) {
     /* For desktops, laptops: */
     .navbar--flex-container {
         display: flex;
@@ -137,56 +180,5 @@ hr {
     /* remove menu bar */
     .navbar__menu--display {
         display: none;
-    }
-}
-
-/* when width gets larger than 481px and smaller than 768px */
-@media only screen and (max-width: 768px) and (min-width: 481px) {
-    /* For Small iPads, tablets: */
-    .navbar--flex-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-   /* show hidden navbar2 and set flex grow value as flex item of navbar flex container*/
-   .navbar2--hide-items {
-       display: flex;
-       align-items: center;
-       flex: 2 0;
-   }
-
-   /* set flex value of image container flex-item */
-   .navbar__img-container--flex-item {
-       flex: 1;
-   }
-
-   /* set flex value of navbar2 container flex-item */
-   .navbar2__nav--flex-item {
-        flex: 1;
-    }
-
-    /* remove numbers on links */
-   strong.navbar__num {
-       display: none;
-   }
-
-   /* remove left and right margin */
-   .nav__links {
-        margin: 3rem 0;
-    }
-
-   .nav__links--flex{
-       display: flex;
-       justify-content: space-around;
-   }
-
-   /* remove menu bar */
-   .navbar__menu--display {
-        display: none;
-    }
-
-    img.navbar__img {
-        margin-top: 0;
     }
 }
