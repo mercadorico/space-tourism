@@ -31,6 +31,9 @@ hr {
     height: 1px;
     background-color: gray;
     opacity: 0.5;
+}
+
+.navbar2__hr {
     margin-right: -2rem;
     z-index: 1;
 }

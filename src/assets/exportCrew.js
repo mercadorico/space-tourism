@@ -1,0 +1,1 @@
+export {default as Douglas} from './crew/image-douglas-hurley.png'

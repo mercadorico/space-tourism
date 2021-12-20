@@ -55,7 +55,7 @@ function Navbar() {
             
             {/* navbar menu for desktop, laptop, and tablet */}
             <div className="navbar2--hide-items">
-                <hr className='navbar2__hr--flex-item'/>
+                <hr className='navbar2__hr--flex-item navbar2__hr'/>
                 <div className='nav navbar__nav--blur navbar2__nav--flex-item'>
                     <div className='nav__links nav__links--flex'>
                         <Menu />

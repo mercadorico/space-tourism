@@ -7,8 +7,80 @@ body.crew {
     background-size: cover;
 }
 
+.crew-header {
+    font-family: var(--font-subheading);
+    color: var(--color-heading);
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+    text-align: center;
+}
+
+.crew__body--flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    min-height: 65vh;
+    justify-content: space-between;
+}
+
+.crew__img--container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crew__img--container > img {
+    width: 12.5rem;
+}
+
+.crew__hr {
+    width: 100%;
+}
+
+.crew__button-container {
+    margin: 1.3rem 0;
+}
+
+.crew__button {
+   width: 0.625rem; 
+   height: 0.625rem;
+   border-radius: 50%;
+   background-color: var(--color-heading2);
+}
+
+.crew__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crew__position {
+    font-family: var(--font-heading);
+    color: var(--color-heading2);
+    font-size: 1rem;
+}
+
+.crew__name {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.crew__description {
+    font-family: var(--font-subheading);
+    color: var(--color-subheading);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
 /* when width gets larger than 481px and smaller than 768px */
-@media only screen and (max-width: 768px) and (min-width: 481px) {
+@media only screen and (max-width: 1304px) and (min-width: 481px) {
     /* For Small iPads, tablets: */
     body.crew {
         background: url('../../assets/crew/background-crew-tablet.jpg') no-repeat center center fixed; 
@@ -20,7 +92,7 @@ body.crew {
 }
 
 /* when width gets larger than 768px */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1305px) {
     /* For laptop, desktops */
     body.crew {
         background: url('../../assets/crew/background-crew-desktop.jpg') no-repeat center center fixed; 
@@ -35,7 +107,7 @@ body.crew {
 }
 
 /* when width gets larger than 1900px */
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-width: 1800px) {
     /* For large desktop, laptop */
     body.crew {
         background: url('../../assets/crew/background-crew-desktop.jpg') no-repeat center center fixed; 
