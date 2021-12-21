@@ -1,14 +1,14 @@
 import React from 'react';
 import './crew.css';
 
-import {douglasDetails} from './exportDetails';
+import {douglasDetails, markDetails, victorDetails, anoushehDetails} from './exportDetails';
 
-function Crew() {
+function Crew(props) {
     // Remove class and add new one to render correct background image
     document.body.classList.remove("home", "destination", "technology");
     document.body.classList.add("crew");
 
-    const crewDetails = [douglasDetails]
+    const crewDetails = [douglasDetails, markDetails, victorDetails, anoushehDetails]
 
     return (
         <div>
@@ -16,21 +16,21 @@ function Crew() {
 
             <div className='crew__body--flex'>
                 <div className='crew__img--container'>
-                    <img src={crewDetails[0].img} alt='crew-img'/>
+                    <img src={crewDetails[props.selectIndex].img} alt='crew-img'/>
                     <hr className='crew__hr'></hr>
                 </div>
 
                 <div className='crew__button-container'>
-                    <button className='crew__button'></button>
-                    <button className='crew__button'></button>
-                    <button className='crew__button'></button>
-                    <button className='crew__button'></button>
+                    <button className='crew__button' onClick={() => {props.handleClick(0)}}></button>
+                    <button className='crew__button' onClick={() => {props.handleClick(1)}}></button>
+                    <button className='crew__button' onClick={() => {props.handleClick(2)}}></button>
+                    <button className='crew__button' onClick={() => {props.handleClick(3)}}></button>
                 </div>
 
                 <div className='crew__details'>
-                    <div className='crew__position'>{crewDetails[0].position}</div>
-                    <div className='crew__name'>{crewDetails[0].name}</div>
-                    <p className='crew__description'>{crewDetails[0].description}</p>
+                    <div className='crew__position'>{crewDetails[props.selectIndex].position}</div>
+                    <div className='crew__name'>{crewDetails[props.selectIndex].name}</div>
+                    <p className='crew__description'>{crewDetails[props.selectIndex].description}</p>
                 </div>
             </div>
         </div>

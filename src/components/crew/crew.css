@@ -33,6 +33,7 @@ body.crew {
 
 .crew__img--container > img {
     width: 12.5rem;
+    height: 14rem;
 }
 
 .crew__hr {
@@ -79,7 +80,7 @@ body.crew {
     letter-spacing: 1px;
 }
 
-/* when width gets larger than 481px and smaller than 768px */
+/* when width gets larger than 481px and smaller than 1304px */
 @media only screen and (max-width: 1304px) and (min-width: 481px) {
     /* For Small iPads, tablets: */
     body.crew {
@@ -89,9 +90,81 @@ body.crew {
        -o-background-size: cover;
         background-size: cover;
     }
+
+    .crew-header {
+        text-align: start;
+        margin-top: 2rem;
+        margin-left: 2.5rem;
+        font-size: 1.25rem;
+    }
+
+    .crew__body--flex {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        margin: 1rem 8rem;
+    }
+
+    .crew__position {
+        font-size: 1.5rem;
+    }
+
+    .crew__name {
+        font-size: 2.5rem;
+    }
+
+    .crew__description {
+        line-height: 180%;
+        font-size: 1.15rem;
+    }
+
+    .crew__button {
+        margin: 0 1rem;
+    }
+
+    .crew__img--container > img {
+        width: 28rem;
+        height: 30rem;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .crew__hr {
+        display: none;
+    }
 }
 
-/* when width gets larger than 768px */
+/* when width gets larger than 1024px and smaller than 1304px */
+@media only screen and (max-width: 1304px) and (min-width: 1024px) {
+
+    .crew-header {
+        font-size: 1.75rem;
+    }
+
+    .crew__body--flex {
+        margin: 4rem 12rem;
+    }
+
+    .crew__position {
+        font-size: 2rem;
+    }
+
+    .crew__name {
+        font-size: 3.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .crew__description {
+        line-height: 200%;
+        font-size: 1.5rem;
+    }
+
+    .crew__img--container > img {
+        height: 35rem;
+    }
+}
+
+/* when width gets larger than 1305px */
 @media only screen and (min-width: 1305px) {
     /* For laptop, desktops */
     body.crew {
@@ -104,9 +177,54 @@ body.crew {
         padding-left: 3.475rem;
         padding-top: 2.5rem;
     }
+
+    .crew-header {
+        font-size: 1.75rem;
+        text-align: start;
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
+
+    .crew__body--flex {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 7rem;
+    }
+
+    .crew__details {
+        align-items: flex-start;
+        width: 40%;
+    }
+
+    .crew__position {
+        font-size: 2rem;
+    }
+
+    .crew__name {
+        font-size: 3.5rem;
+    }
+
+    .crew__description {
+        font-size: 1.2rem;
+        text-align: start;
+        padding-right: 7rem;
+    }
+
+    .crew__img--container > img {
+        width: 32rem;
+        height: 42rem;
+        position: absolute;
+        bottom: 0;
+        right: 5rem;
+    }
+
+    .crew__hr {
+        display: none;
+    }
 }
 
-/* when width gets larger than 1900px */
+/* when width gets larger than 1800px */
 @media only screen and (min-width: 1800px) {
     /* For large desktop, laptop */
     body.crew {
@@ -118,5 +236,21 @@ body.crew {
 
         padding-left: 3.475rem;
         padding-top: 2.5rem;
+    }
+
+    .crew-header {
+        padding-left: 5rem;
+    }
+
+    .crew__body--flex {
+        padding-left: 5rem;
+    }
+
+    .crew__details {
+        width: 40%;
+    }
+
+    .crew__img--container > img {
+        right: 20rem;
     }
 }
