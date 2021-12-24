@@ -34,6 +34,7 @@ body.crew {
 .crew__img--container > img {
     width: 12.5rem;
     height: 14rem;
+    z-index: -1;
 }
 
 .crew__hr {
@@ -244,10 +245,16 @@ body.crew {
 
     .crew__body--flex {
         padding-left: 5rem;
+        max-height: 100%;
+        flex-wrap: wrap;
     }
 
     .crew__details {
         width: 40%;
+    }
+
+    .crew__img--container {
+        max-width: 40%;
     }
 
     .crew__img--container > img {
