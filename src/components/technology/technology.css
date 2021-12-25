@@ -28,6 +28,10 @@ body.technology {
     max-width: 100%;
 }
 
+.button__flex-container {
+    margin: 1rem 0;
+}
+
 .technology__button {
     min-height: 2.5rem;
     min-width: 2.5rem;
@@ -114,8 +118,8 @@ body.technology {
     }
 
     .technology__button {
-        min-width: 6rem;
-        min-height: 6rem;
+        min-width: 5rem;
+        min-height: 5rem;
         font-size: 2.2rem;
     }
 
@@ -124,7 +128,7 @@ body.technology {
     }
 
     .terminology {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .technology__name {
@@ -132,7 +136,7 @@ body.technology {
     }
 
     .description {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         padding: 0 8rem;
     }
 
