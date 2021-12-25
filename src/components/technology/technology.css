@@ -28,6 +28,16 @@ body.technology {
     max-width: 100%;
 }
 
+.technology__button {
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    border: solid 0.2px gray ;
+    border-radius: 50%;
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-size: 1rem;
+}
+
 .details__flex-container {
     min-height: 35vh;
 }
@@ -55,7 +65,7 @@ body.technology {
     padding: 0 1.5rem;
 }
 
-/* when width gets larger than 481px and smaller than 768px */
+/* when width gets larger than 481px and smaller than 1023px */
 @media only screen and (max-width: 768px) and (min-width: 481px) {
     /* For Small iPads, tablets: */
     body.technology {
@@ -65,10 +75,71 @@ body.technology {
        -o-background-size: cover;
         background-size: cover;
     }
+
+    .technology__header {
+        font-size: 1.25rem;
+        text-align: start;
+        margin-left: 2rem;
+    }
+
+    .technology__button {
+        min-width: 4rem;
+        min-height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .details__flex-container {
+        min-height: 25vh;
+    }
+
+    .technology__name {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        padding: 0 8rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    /* For iPads with large screen: */
+    .technology__header {
+        font-size: 2rem;
+        text-align: start;
+        margin-left: 2rem;
+    }
+
+    .technology__img-container > img {
+        width: 100%;
+    }
+
+    .technology__button {
+        min-width: 6rem;
+        min-height: 6rem;
+        font-size: 2.2rem;
+    }
+
+    .details__flex-container {
+        min-height: 25vh;
+    }
+
+    .terminology {
+        font-size: 1.75rem;
+    }
+
+    .technology__name {
+        font-size: 3.5rem;
+    }
+
+    .description {
+        font-size: 1.75rem;
+        padding: 0 8rem;
+    }
+
 }
 
 /* when width gets larger than 768px */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
     /* For laptop, desktops */
     body.technology {
         background: url('../../assets/technology/background-technology-desktop.jpg') no-repeat center center fixed; 
@@ -76,9 +147,6 @@ body.technology {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-
-        padding-left: 3.475rem;
-        padding-top: 2.5rem;
     }
 }
 
