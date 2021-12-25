@@ -12,25 +12,25 @@ function Technology(props) {
 
     return (
         <div>
-            <div className='technology-header'><strong>02</strong> SPACE LAUNCH 101</div>
+            <div className='technology__header'><strong>02</strong> SPACE LAUNCH 101</div>
 
             <div className='technology__flex-container'>
                 <div className='technology__img-container'>
                     <img className='landscape' src={technologyDetails[0].img_landscape} alt='crew-img'/>
                 </div>
 
-                <div className='details__flex-container'>
-                    <div className='button__flex-container'>
+                <div className='button__flex-container'>
                         <button className='technology__button'>1</button>
                         <button className='technology__button'>2</button>
                         <button className='technology__button'>3</button>
-                    </div>
+                </div>
 
-                    <div>THE TERMINOLOGY...</div>
+                <div className='details__flex-container'>
+                    <div className='terminology'>THE TERMINOLOGY...</div>
 
-                    <div>{technologyDetails[0].name}</div>
+                    <div className='technology__name'>{technologyDetails[0].name}</div>
 
-                    <p>{technologyDetails[0].description}</p>
+                    <p className='description'>{technologyDetails[0].description}</p>
                 </div>
             </div>
         </div>

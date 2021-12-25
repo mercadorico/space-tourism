@@ -7,6 +7,54 @@ body.technology {
     background-size: cover;
 }
 
+.technology__header {
+    font-family: var(--font-subheading);
+    color: var(--color-heading);
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+    margin: 2rem 0;
+}
+
+.technology__flex-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 70vh;
+    justify-content: space-between;
+}
+
+.technology__img-container > img {
+    max-width: 100%;
+}
+
+.details__flex-container {
+    min-height: 35vh;
+}
+
+.terminology {
+    font-family: var(--font-subheading);
+    color: var(--color-subheading);
+    font-size: 1rem;
+    letter-spacing: 2.36px;
+}
+
+.technology__name {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.75rem;
+}
+
+.description {
+    font-family: var(--font-subheading);
+    color: var(--color-subheading);
+    font-size: 1rem;
+    line-height: 170%;
+    padding: 0 1.5rem;
+}
+
 /* when width gets larger than 481px and smaller than 768px */
 @media only screen and (max-width: 768px) and (min-width: 481px) {
     /* For Small iPads, tablets: */
