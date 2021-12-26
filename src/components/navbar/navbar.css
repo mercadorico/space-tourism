@@ -91,7 +91,7 @@ hr {
 }
 
 /* when width gets larger than 481px and smaller than 1304px */
-@media only screen and (max-width: 1304px) and (min-width: 481px) {
+@media only screen and (max-width: 1304px) and (min-width: 600px) {
     /* For Small iPads, tablets: */
     .navbar--flex-container {
         display: flex;

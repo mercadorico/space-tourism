@@ -92,7 +92,7 @@ button {
 }
 
 /* when width gets larger than 481px and smaller than 1304px */
-@media only screen and (max-width: 1304px) and (min-width: 481px) {
+@media only screen and (max-width: 1304px) and (min-width: 600px) {
     /* For Small iPads, tablets: */
     body.destination {
         background: url('../../assets/destination/background-destination-tablet.jpg') no-repeat center center fixed; 
