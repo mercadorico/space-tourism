@@ -28,6 +28,10 @@ body.technology {
     max-width: 100%;
 }
 
+.portrait {
+    display: none;
+}
+
 .button__flex-container {
     margin: 1rem 0;
 }
@@ -84,6 +88,10 @@ body.technology {
         font-size: 1.25rem;
         text-align: start;
         margin-left: 2rem;
+    }
+
+    .portrait {
+        display: none;
     }
 
     .technology__button {
@@ -152,10 +160,68 @@ body.technology {
         -o-background-size: cover;
         background-size: cover;
     }
+
+    .technology__header {
+        font-size: 1.75rem;
+        text-align: start;
+        margin-left: 7rem;
+    }
+
+    .landscape {
+        display: none;
+    }
+
+    .portrait {
+        min-width: 32rem;
+        min-height: 33rem;
+        display: block;
+        margin: 0;
+    }
+
+    .technology__flex-container {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .button__flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        order: 1;
+        margin-left: 5rem;
+    }
+
+    .technology__button {
+        min-width: 3.5rem;
+        min-height: 3.5rem;
+        font-size: 1.5rem;
+    }
+
+    .details__flex-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        text-align: start;
+        justify-content: center;
+    }
+
+    .terminology {
+        font-size: 1rem;
+    }
+
+    .technology__name {
+        font-size: 3.5rem;
+    }
+
+    .description {
+        padding: 0;
+        font-size: 1.125rem;
+    }
 }
 
 /* when width gets larger than 1900px */
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-width: 1600px) {
     /* For large desktop, laptop */
     body.technology {
         background: url('../../assets/technology/background-technology-desktop.jpg') no-repeat center center fixed; 
@@ -166,5 +232,22 @@ body.technology {
 
         padding-left: 3.475rem;
         padding-top: 2.5rem;
+    }
+
+    .technology__flex-container {
+        gap: 5rem;
+    }
+
+    .portrait {
+        min-width: 35rem;
+        min-height: 36rem;
+    }
+
+    .button__flex-container {
+        margin-left: 7rem;
+    }
+
+    .description {
+        padding-right: 10rem;
     }
 }
