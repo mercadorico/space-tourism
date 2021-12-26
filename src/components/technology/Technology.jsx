@@ -16,22 +16,22 @@ function Technology(props) {
 
             <div className='technology__flex-container'>
                 <div className='technology__img-container'>
-                    <img className='landscape' src={technologyDetails[0].img_landscape} alt='crew-img'/>
-                    <img className='portrait' src={technologyDetails[0].img_portrait} alt='crew-img'/>
+                    <img className='landscape' src={technologyDetails[props.selectIndex].img_landscape} alt='crew-img'/>
+                    <img className='portrait' src={technologyDetails[props.selectIndex].img_portrait} alt='crew-img'/>
                 </div>
 
                 <div className='button__flex-container'>
-                        <button className='technology__button'>1</button>
-                        <button className='technology__button'>2</button>
-                        <button className='technology__button'>3</button>
+                        <button className='technology__button' onClick={() => {props.handleClick(0)}} >1</button>
+                        <button className='technology__button' onClick={() => {props.handleClick(1)}} >2</button>
+                        <button className='technology__button' onClick={() => {props.handleClick(2)}} >3</button>
                 </div>
 
                 <div className='details__flex-container'>
                     <div className='terminology'>THE TERMINOLOGY...</div>
 
-                    <div className='technology__name'>{technologyDetails[0].name}</div>
+                    <div className='technology__name'>{technologyDetails[props.selectIndex].name}</div>
 
-                    <p className='description'>{technologyDetails[0].description}</p>
+                    <p className='description'>{technologyDetails[props.selectIndex].description}</p>
                 </div>
             </div>
         </div>
