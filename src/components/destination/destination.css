@@ -188,6 +188,7 @@ button {
     .destination__body {
         align-items: flex-start;
         min-height: 55vh;
+        min-width: 46vh;
         justify-content: space-between;
     }
 
