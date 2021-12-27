@@ -6,26 +6,26 @@ import logo from '../../assets/shared/logo.svg'
 import menu from '../../assets/shared/icon-hamburger.svg';
 import close from '../../assets/shared/icon-close.svg';
 
-function Menu() {
+function Menu(props) {
     return (
         <>
-            <Link to="/">
+            <Link to="/" onClick={() => {props.resetState()}} >
                  <strong className='navbar__num'>00</strong> HOME
             </Link>
-            <Link to="/destination">
+            <Link to="/destination" onClick={() => {props.resetState()}} >
                 <strong className='navbar__num'>01</strong> DESTINATION
             </Link>
-            <Link to="/crew">
+            <Link to="/crew" onClick={() => {props.resetState()}} >
                 <strong className='navbar__num'>02</strong> CREW
             </Link>
-            <Link to="/technology">
+            <Link to="/technology" onClick={() => {props.resetState()}} >
                 <strong className='navbar__num'>03</strong> TECHNOLOGY
             </Link>            
         </>
     );
 }
 
-function Navbar() {
+function Navbar(props) {
     const [toggleMenu, setToggleMenu] = useState(false); 
 
     return (
@@ -47,7 +47,7 @@ function Navbar() {
                 {
                     toggleMenu && (
                         <div className='menu__links--flex-container'>
-                            <Menu />
+                            <Menu resetState={props.resetState}/>
                         </div>              
                     )
                 }
@@ -58,7 +58,7 @@ function Navbar() {
                 <hr className='navbar2__hr--flex-item navbar2__hr'/>
                 <div className='nav navbar__nav--blur navbar2__nav--flex-item'>
                     <div className='nav__links nav__links--flex'>
-                        <Menu />
+                        <Menu resetState={props.resetState}/>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <Navbar />
+            <Navbar resetState={resetState} />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="destination" element={<Destination selectIndex={selectIndex} handleClick={handleClick} resetState={resetState} />} />
