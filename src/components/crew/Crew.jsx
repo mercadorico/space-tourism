@@ -20,14 +20,15 @@ function Crew(props) {
                     <hr className='crew__hr'></hr>
                 </div>
 
-                <div className='crew__button-container'>
-                    <button className='crew__button' onClick={() => {props.handleClick(0)}}></button>
-                    <button className='crew__button' onClick={() => {props.handleClick(1)}}></button>
-                    <button className='crew__button' onClick={() => {props.handleClick(2)}}></button>
-                    <button className='crew__button' onClick={() => {props.handleClick(3)}}></button>
-                </div>
-
                 <div className='crew__details'>
+
+                    <div className='crew__button-container'>
+                        <button className='crew__button' onClick={() => {props.handleClick(0)}}></button>
+                        <button className='crew__button' onClick={() => {props.handleClick(1)}}></button>
+                        <button className='crew__button' onClick={() => {props.handleClick(2)}}></button>
+                        <button className='crew__button' onClick={() => {props.handleClick(3)}}></button>
+                    </div>
+
                     <div className='crew__position'>{crewDetails[props.selectIndex].position}</div>
                     <div className='crew__name'>{crewDetails[props.selectIndex].name}</div>
                     <p className='crew__description'>{crewDetails[props.selectIndex].description}</p>

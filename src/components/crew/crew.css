@@ -81,7 +81,7 @@ body.crew {
     letter-spacing: 1px;
 }
 
-/* when width gets larger than 481px and smaller than 1304px */
+/* when width gets larger than 600px and smaller than 1304px */
 @media only screen and (max-width: 1304px) and (min-width: 600px) {
     /* For Small iPads, tablets: */
     body.crew {
@@ -90,6 +90,7 @@ body.crew {
        -moz-background-size: cover;
        -o-background-size: cover;
         background-size: cover;
+
     }
 
     .crew-header {
@@ -101,8 +102,13 @@ body.crew {
 
     .crew__body--flex {
         flex-direction: column-reverse;
-        justify-content: flex-end;
-        margin: 1rem 8rem;
+        justify-content: space-between;
+        margin: 0 8rem;
+        min-height: 81.5vh;
+    }
+
+    .crew__button-container {
+        order: 1;
     }
 
     .crew__position {
@@ -125,43 +131,12 @@ body.crew {
     .crew__img--container > img {
         width: 28rem;
         height: 30rem;
-        position: absolute;
-        bottom: 0;
+        /* position: absolute; */
+        /* bottom: 0; */
     }
 
     .crew__hr {
         display: none;
-    }
-}
-
-/* when width gets larger than 1024px and smaller than 1304px */
-@media only screen and (max-width: 1304px) and (min-width: 1024px) {
-
-    .crew-header {
-        font-size: 1.75rem;
-    }
-
-    .crew__body--flex {
-        margin: 4rem 12rem;
-    }
-
-    .crew__position {
-        font-size: 2rem;
-    }
-
-    .crew__name {
-        font-size: 3.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .crew__description {
-        line-height: 200%;
-        font-size: 1.5rem;
-    }
-
-    .crew__img--container > img {
-        height: 35rem;
     }
 }
 
@@ -177,6 +152,7 @@ body.crew {
 
         padding-left: 3.475rem;
         padding-top: 2.5rem;
+        max-height: 100%;
     }
 
     .crew-header {
@@ -187,15 +163,18 @@ body.crew {
     }
 
     .crew__body--flex {
-        flex-direction: column-reverse;
+        flex-direction: row-reverse;
         justify-content: space-between;
         align-items: flex-start;
-        padding-top: 7rem;
     }
 
     .crew__details {
         align-items: flex-start;
         width: 40%;
+    }
+
+    .crew__button-container {
+        order: 1;
     }
 
     .crew__position {
@@ -213,11 +192,8 @@ body.crew {
     }
 
     .crew__img--container > img {
-        width: 32rem;
-        height: 42rem;
-        position: absolute;
-        bottom: 0;
-        right: 5rem;
+        width: 30rem;
+        height: 40rem;
     }
 
     .crew__hr {
@@ -246,7 +222,6 @@ body.crew {
     .crew__body--flex {
         padding-left: 5rem;
         max-height: 100%;
-        flex-wrap: wrap;
     }
 
     .crew__details {
@@ -255,9 +230,5 @@ body.crew {
 
     .crew__img--container {
         max-width: 40%;
-    }
-
-    .crew__img--container > img {
-        right: 20rem;
     }
 }
