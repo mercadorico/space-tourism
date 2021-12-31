@@ -97,7 +97,7 @@ body.home {
 
     .home--flex-container {
         flex-direction: row;
-        height: 63vh;
+        min-height: 70vh;
         margin: 0 8rem;
         align-items: flex-end;
     }

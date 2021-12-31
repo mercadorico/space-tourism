@@ -20,7 +20,7 @@ body.crew {
     flex-direction: column;
     align-items: center;
     margin: 2rem;
-    min-height: 65vh;
+    /* min-height: 65vh; */
     justify-content: space-between;
 }
 
@@ -42,7 +42,7 @@ body.crew {
 }
 
 .crew__button-container {
-    margin: 1.3rem 0;
+    margin: 2rem 0;
 }
 
 .crew__button {
@@ -117,6 +117,7 @@ body.crew {
 
     .crew__name {
         font-size: 2.5rem;
+        text-align: center;
     }
 
     .crew__description {
@@ -166,14 +167,18 @@ body.crew {
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: flex-start;
+        margin-bottom: 0;
     }
 
     .crew__details {
+        align-self: center;
         align-items: flex-start;
-        width: 40%;
+        min-width: 45%;
+        min-height: 40vh;
     }
 
     .crew__button-container {
+        margin: auto 0;
         order: 1;
     }
 
@@ -191,9 +196,14 @@ body.crew {
         padding-right: 7rem;
     }
 
+    .crew__img--container {
+        align-self: flex-end;
+        bottom: 0;
+    }
+
     .crew__img--container > img {
         width: 30rem;
-        height: 40rem;
+        height: 42.1rem;
     }
 
     .crew__hr {
