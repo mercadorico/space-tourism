@@ -55,6 +55,17 @@ body.home {
     border-radius: 50%;
 }
 
+.home__explore--flex-container {
+    border-radius: 50%;
+    padding: 3em;
+}
+
+.home__explore--flex-container:hover {    
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background-color: rgba(201, 201, 201, 0.1);
+}
+
 /* when width gets larger than 481px and smaller than 768px */
 @media only screen and (max-width: 1304px) and (min-width: 600px) {
     /* For Small iPads, tablets: */
@@ -125,12 +136,15 @@ body.home {
         flex: 1 2;
     }
 
+    .home__explore--flex-container {
+        padding: 4rem;
+    }
+
     .home__explore--flex-container2 {
         height: 31.68vh;
         width: 31.68vh;
         max-height: 300px;
         max-width: 300px;
-        margin-right: 2rem;
     }
 }
 
