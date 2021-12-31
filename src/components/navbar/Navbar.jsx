@@ -9,17 +9,21 @@ import close from '../../assets/shared/icon-close.svg';
 function Menu(props) {
     return (
         <>
-            <Link to="/" onClick={() => {props.resetState()}} >
-                 <strong className='navbar__num'>00</strong> HOME
+            <Link to="/" onClick={() => {props.resetState()}} > 
+                <strong className='navbar__num'>00</strong> HOME 
+                <hr className='navbar-home__hr--hide navbar-home__hr '></hr>
             </Link>
             <Link to="/destination" onClick={() => {props.resetState()}} >
                 <strong className='navbar__num'>01</strong> DESTINATION
+                <hr className='navbar-home__hr--hide navbar-home__hr '></hr>
             </Link>
             <Link to="/crew" onClick={() => {props.resetState()}} >
                 <strong className='navbar__num'>02</strong> CREW
+                <hr className='navbar-home__hr--hide navbar-home__hr '></hr>
             </Link>
             <Link to="/technology" onClick={() => {props.resetState()}} >
                 <strong className='navbar__num'>03</strong> TECHNOLOGY
+                <hr className='navbar-home__hr--hide navbar-home__hr '></hr>
             </Link>            
         </>
     );

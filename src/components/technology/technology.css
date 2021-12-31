@@ -163,6 +163,9 @@ body.technology {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
+        padding-left: 3.475rem;
+        padding-top: 2.5rem;
     }
 
     .technology__header {

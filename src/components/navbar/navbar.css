@@ -163,9 +163,9 @@ hr {
         justify-content: space-around;
     }
 
-    /* set margina around nav-links */
+    /* set margins around nav-links */
     .nav__links {
-        margin: 3rem;
+        margin: 3rem 3rem 0 3rem;
     }
 
     /* remove img margin for Small screens, laptops: */
@@ -182,5 +182,19 @@ hr {
     /* remove menu bar */
     .navbar__menu--display {
         display: none;
+    }
+
+    .navbar-home__hr {
+        margin-top: 3rem;
+        height: 2px;
+        background-color: white;
+    }
+
+    .navbar-home__hr--show {
+        opacity: 1;
+    }
+
+    .navbar-home__hr--hide {
+        opacity: 0;
     }
 }
