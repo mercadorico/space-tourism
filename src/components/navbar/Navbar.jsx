@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 
 import './navbar.css';
@@ -7,23 +7,26 @@ import menu from '../../assets/shared/icon-hamburger.svg';
 import close from '../../assets/shared/icon-close.svg';
 
 function Menu(props) {
+
+    const handleNavbarClick = (navClass) => {
+        props.resetState();
+        props.setNavState(navClass);
+    }
+
+
     return (
         <>
-            <Link to="/" onClick={() => {props.resetState()}} > 
+            <Link className='home-bar' to="/" onClick={(e) => {handleNavbarClick(e.target.className)}} > 
                 <strong className='navbar__num'>00</strong> HOME 
-                <hr className='navbar-home__hr--hide navbar-home__hr '></hr>
             </Link>
-            <Link to="/destination" onClick={() => {props.resetState()}} >
+            <Link className='destination-bar' to="/destination" onClick={(e) => {handleNavbarClick(e.target.className)}} >
                 <strong className='navbar__num'>01</strong> DESTINATION
-                <hr className='navbar-home__hr--hide navbar-home__hr '></hr>
             </Link>
-            <Link to="/crew" onClick={() => {props.resetState()}} >
+            <Link className='crew-bar' to="/crew" onClick={(e) => {handleNavbarClick(e.target.className)}} >
                 <strong className='navbar__num'>02</strong> CREW
-                <hr className='navbar-home__hr--hide navbar-home__hr '></hr>
             </Link>
-            <Link to="/technology" onClick={() => {props.resetState()}} >
+            <Link className='technology-bar' to="/technology" onClick={(e) => {handleNavbarClick(e.target.className)}} >
                 <strong className='navbar__num'>03</strong> TECHNOLOGY
-                <hr className='navbar-home__hr--hide navbar-home__hr '></hr>
             </Link>            
         </>
     );
@@ -31,6 +34,18 @@ function Menu(props) {
 
 function Navbar(props) {
     const [toggleMenu, setToggleMenu] = useState(false); 
+    const [navState, setNavState] = useState('home-bar');
+
+    useEffect(() => {
+
+        // remove nav_underline class on navbar links 
+        document.body.querySelector('.home-bar').classList.remove('nav_underline');
+        document.body.querySelector('.destination-bar').classList.remove('nav_underline');
+        document.body.querySelector('.crew-bar').classList.remove('nav_underline');
+        document.body.querySelector('.technology-bar').classList.remove('nav_underline');
+        
+        document.body.querySelector(`.${navState}`).classList.add('nav_underline');
+    });
 
     return (
         <div className="navbar navbar--flex-container">
@@ -51,7 +66,7 @@ function Navbar(props) {
                 {
                     toggleMenu && (
                         <div className='menu__links--flex-container'>
-                            <Menu resetState={props.resetState}/>
+                            <Menu resetState={props.resetState} setNavState={setNavState} />
                         </div>              
                     )
                 }
@@ -62,7 +77,7 @@ function Navbar(props) {
                 <hr className='navbar2__hr--flex-item navbar2__hr'/>
                 <div className='nav navbar__nav--blur navbar2__nav--flex-item'>
                     <div className='nav__links nav__links--flex'>
-                        <Menu resetState={props.resetState}/>
+                        <Menu resetState={props.resetState} setNavState={setNavState} />
                     </div>
                 </div>
             </div>

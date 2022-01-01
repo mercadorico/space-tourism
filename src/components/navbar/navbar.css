@@ -164,8 +164,12 @@ hr {
     }
 
     /* set margins around nav-links */
-    .nav__links {
-        margin: 3rem 3rem 0 3rem;
+    .nav__links > a {
+        padding: 3rem 0;
+    }
+
+    .nav_underline {
+        border-bottom: solid 3px white;
     }
 
     /* remove img margin for Small screens, laptops: */
