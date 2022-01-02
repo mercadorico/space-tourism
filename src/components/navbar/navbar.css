@@ -168,8 +168,10 @@ hr {
         padding: 3rem 0;
     }
 
+    /* create underline on selected nav link */
     .nav_underline {
         border-bottom: solid 3px white;
+        pointer-events: none;
     }
 
     /* remove img margin for Small screens, laptops: */
@@ -186,19 +188,5 @@ hr {
     /* remove menu bar */
     .navbar__menu--display {
         display: none;
-    }
-
-    .navbar-home__hr {
-        margin-top: 3rem;
-        height: 2px;
-        background-color: white;
-    }
-
-    .navbar-home__hr--show {
-        opacity: 1;
-    }
-
-    .navbar-home__hr--hide {
-        opacity: 0;
     }
 }
