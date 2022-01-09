@@ -11,6 +11,13 @@ function Destination(props) {
     // array to hold destination imgs
     const destinationDetails = [moonDetails, marsDetails, europaDetails, titanDetails];
 
+    //return hr on button base on selectIndex state
+    const underLine = (selectIndex, buttonNumber) => {
+        if(selectIndex === buttonNumber) {
+            return <hr className='button-underline'></hr>
+        }
+    }
+
     return (
         <div>
             <div className='destination__flex-container'>
@@ -24,10 +31,10 @@ function Destination(props) {
                 <div className='destination__body'>
                     <div className='destination__button-container'>
                         {/* When you need to invoke a function that needs an argument, wrap it inside another function.*/}
-                        <button onClick={() => {props.handleClick(0)}}>MOON</button>
-                        <button onClick={() => {props.handleClick(1)}}>MARS</button>
-                        <button onClick={() => {props.handleClick(2)}}>EUROPA</button>
-                        <button onClick={() => {props.handleClick(3)}}>TITAN</button>
+                        <button onClick={() => {props.handleClick(0)}}>MOON{underLine(props.selectIndex, 0)}</button>
+                        <button onClick={() => {props.handleClick(1)}}>MARS{underLine(props.selectIndex, 1)}</button>
+                        <button onClick={() => {props.handleClick(2)}}>EUROPA{underLine(props.selectIndex, 2)}</button>
+                        <button onClick={() => {props.handleClick(3)}}>TITAN{underLine(props.selectIndex, 3)}</button>
                     </div>
 
                     <div className='destination__name'>{destinationDetails[props.selectIndex].name}</div>
