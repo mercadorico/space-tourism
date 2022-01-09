@@ -21,9 +21,9 @@ const App = () => {
             <Navbar resetState={resetState} />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="destination" element={<Destination selectIndex={selectIndex} handleClick={handleClick} resetState={resetState} />} />
-                <Route path="crew" element={<Crew selectIndex={selectIndex} handleClick={handleClick} resetState={resetState} />} />
-                <Route path="technology" element={<Technology selectIndex={selectIndex} handleClick={handleClick} resetState={resetState} />} />
+                <Route path="destination" element={<Destination selectIndex={selectIndex} handleClick={handleClick} />} />
+                <Route path="crew" element={<Crew selectIndex={selectIndex} handleClick={handleClick} />} />
+                <Route path="technology" element={<Technology selectIndex={selectIndex} handleClick={handleClick}  />} />
             </Routes>
         </div>
     )
