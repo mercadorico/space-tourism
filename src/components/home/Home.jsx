@@ -17,7 +17,7 @@ function Home() {
                 </div>
 
                 <div className='home__explore--flex-container home__explore--flex-item'>
-                    <a href='/destination'>
+                    <a href='space-tourism/destination'>
                         <div className='home__explore--flex-container2'>EXPLORE</div>
                     </a>
                 </div>
