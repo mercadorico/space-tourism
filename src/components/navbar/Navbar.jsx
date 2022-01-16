@@ -9,6 +9,7 @@ import close from '../../assets/shared/icon-close.svg';
 function Menu(props) {
 
     const handleNavbarClick = (navClass) => {
+        // set nav state by getting the class of clicked nav link
         props.resetState();
         props.setNavState(navClass);
     }

@@ -94,6 +94,12 @@ hr {
     display: none;
 }
 
+/* create underline on selected nav link */
+.nav_underline {
+    border-bottom: solid 1px white;
+    pointer-events: none;
+}
+
 /* when width gets larger than 481px and smaller than 1304px */
 @media only screen and (max-width: 1304px) and (min-width: 600px) {
     /* For Small iPads, tablets: */
@@ -134,6 +140,12 @@ hr {
    /* remove menu bar */
    .navbar__menu--display {
         display: none;
+    }
+
+    /* create underline on selected nav link */
+    .nav_underline {
+        border-bottom: solid 2px white;
+        pointer-events: none;
     }
 }
 
