@@ -10,6 +10,13 @@ function Technology(props) {
 
     const technologyDetails = [vehicleDetails, portDetails, capsuleDetails];
 
+    //return div on button base on selectIndex state
+    const selectedButton = (selectIndex, buttonNumber) => {
+        if(selectIndex === buttonNumber) {
+            return <div className='technologyFillDiv'>{selectIndex + 1}</div>
+        }
+    }
+
     return (
         <div>
             <div className='technology__header'><strong>03</strong> SPACE LAUNCH 101</div>
@@ -19,11 +26,11 @@ function Technology(props) {
                     <img className='landscape' src={technologyDetails[props.selectIndex].img_landscape} alt='crew-img'/>
                     <img className='portrait' src={technologyDetails[props.selectIndex].img_portrait} alt='crew-img'/>
                 </div>
-
+                
                 <div className='button__flex-container'>
-                        <button className='technology__button' onClick={() => {props.handleClick(0)}} >1</button>
-                        <button className='technology__button' onClick={() => {props.handleClick(1)}} >2</button>
-                        <button className='technology__button' onClick={() => {props.handleClick(2)}} >3</button>
+                        <button className='technology__button' onClick={() => {props.handleClick(0)}}>{props.selectIndex === 0 ? selectedButton(props.selectIndex, 0) : 1}</button>
+                        <button className='technology__button' onClick={() => {props.handleClick(1)}}>{props.selectIndex === 1 ? selectedButton(props.selectIndex, 1) : 2}</button>
+                        <button className='technology__button' onClick={() => {props.handleClick(2)}}>{props.selectIndex === 2 ? selectedButton(props.selectIndex, 2) : 3}</button>
                 </div>
 
                 <div className='details__flex-container'>

@@ -37,13 +37,13 @@ body.technology {
 }
 
 .technology__button {
-    min-height: 2.5rem;
-    min-width: 2.5rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
     border: solid 0.2px gray ;
     border-radius: 50%;
     font-family: var(--font-heading);
     color: var(--color-heading);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .details__flex-container {
@@ -71,6 +71,18 @@ body.technology {
     font-size: 1rem;
     line-height: 170%;
     padding: 0 1.5rem;
+}
+
+/* return this div if button is selected otherwise return a number, refer to Technology.jsx conditional render using ternary( denoted by ?) operator */
+.technologyFillDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
 }
 
 /* when width gets larger than 481px and smaller than 1023px */
@@ -115,6 +127,18 @@ body.technology {
     .description {
         padding: 0 8rem;
     }
+
+    /* return this div if button is selected otherwise return a number, refer to Technology.jsx conditional render using ternary( denoted by ?) operator */
+    .technologyFillDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: white;
+        color: black;
+    }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1304px) {
@@ -150,6 +174,18 @@ body.technology {
     .description {
         font-size: 1.5rem;
         padding: 0 8rem;
+    }
+    
+    /* return this div if button is selected otherwise return a number, refer to Technology.jsx conditional render using ternary( denoted by ?) operator */
+    .technologyFillDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: white;
+        color: black;
     }
 
 }
