@@ -40,12 +40,12 @@ function Navbar(props) {
     useEffect(() => {
 
         // remove nav_underline class on navbar links 
-        document.body.querySelector('.home-bar').classList.remove('nav_underline');
-        document.body.querySelector('.destination-bar').classList.remove('nav_underline');
-        document.body.querySelector('.crew-bar').classList.remove('nav_underline');
-        document.body.querySelector('.technology-bar').classList.remove('nav_underline');
+        document.body.querySelector('.home-bar').classList.remove('nav--underline');
+        document.body.querySelector('.destination-bar').classList.remove('nav--underline');
+        document.body.querySelector('.crew-bar').classList.remove('nav--underline');
+        document.body.querySelector('.technology-bar').classList.remove('nav--underline');
         
-        document.body.querySelector(`.${navState}`).classList.add('nav_underline');
+        document.body.querySelector(`.${navState}`).classList.add('nav--underline');
     });
 
     return (

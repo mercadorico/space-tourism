@@ -91,7 +91,7 @@ button {
     text-align: center;
 }
 
-hr.button-underline {
+hr.button--underline {
     background-color: #fff;
     border: 1px solid #fff;
     opacity: 1;

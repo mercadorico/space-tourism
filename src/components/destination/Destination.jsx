@@ -14,7 +14,7 @@ function Destination(props) {
     //return hr on button base on selectIndex state
     const underLine = (selectIndex, buttonNumber) => {
         if(selectIndex === buttonNumber) {
-            return <hr className='button-underline'></hr>
+            return <hr className='button--underline'></hr>
         }
     }
 

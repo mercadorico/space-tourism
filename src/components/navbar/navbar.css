@@ -95,7 +95,7 @@ hr {
 }
 
 /* create underline on selected nav link */
-.nav_underline {
+.nav--underline {
     border-bottom: solid 1px white;
     pointer-events: none;
 }
@@ -143,7 +143,7 @@ hr {
     }
 
     /* create underline on selected nav link */
-    .nav_underline {
+    .nav--underline {
         border-bottom: solid 2px white;
         pointer-events: none;
     }
@@ -186,7 +186,7 @@ hr {
     }
 
     /* create underline on selected nav link */
-    .nav_underline {
+    .nav--underline {
         border-bottom: solid 3px white;
         pointer-events: none;
     }

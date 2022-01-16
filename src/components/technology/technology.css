@@ -74,7 +74,7 @@ body.technology {
 }
 
 /* return this div if button is selected otherwise return a number, refer to Technology.jsx conditional render using ternary( denoted by ?) operator */
-.technologyFillDiv {
+.technology__button-div--fill {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +129,7 @@ body.technology {
     }
 
     /* return this div if button is selected otherwise return a number, refer to Technology.jsx conditional render using ternary( denoted by ?) operator */
-    .technologyFillDiv {
+    .technology__button-div--fill {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -177,7 +177,7 @@ body.technology {
     }
     
     /* return this div if button is selected otherwise return a number, refer to Technology.jsx conditional render using ternary( denoted by ?) operator */
-    .technologyFillDiv {
+    .technology__button-div--fill {
         display: flex;
         justify-content: center;
         align-items: center;

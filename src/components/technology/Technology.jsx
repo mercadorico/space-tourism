@@ -13,7 +13,7 @@ function Technology(props) {
     //return div on button base on selectIndex state
     const selectedButton = (selectIndex, buttonNumber) => {
         if(selectIndex === buttonNumber) {
-            return <div className='technologyFillDiv'>{selectIndex + 1}</div>
+            return <div className='technology__button-div--fill'>{selectIndex + 1}</div>
         }
     }
 

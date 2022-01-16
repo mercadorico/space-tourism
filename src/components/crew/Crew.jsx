@@ -13,7 +13,7 @@ function Crew(props) {
     //return div on button base on selectIndex state
     const selectedButton = (selectIndex, buttonNumber) => {
         if(selectIndex === buttonNumber) {
-            return <div className='fillDiv'></div>
+            return <div className='crew__button-div--fill'></div>
         }
     }
 

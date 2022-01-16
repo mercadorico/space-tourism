@@ -81,7 +81,7 @@ body.crew {
     letter-spacing: 1px;
 }
 
-.fillDiv {
+.crew__button-div--fill {
     width: 0.625rem; 
     height: 0.625rem;
     border-radius: 50%;
