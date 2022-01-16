@@ -81,6 +81,13 @@ body.crew {
     letter-spacing: 1px;
 }
 
+.fillDiv {
+    width: 0.625rem; 
+    height: 0.625rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
 /* when width gets larger than 600px and smaller than 1304px */
 @media only screen and (max-width: 1304px) and (min-width: 600px) {
     /* For Small iPads, tablets: */

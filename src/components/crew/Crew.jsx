@@ -10,6 +10,13 @@ function Crew(props) {
 
     const crewDetails = [douglasDetails, markDetails, victorDetails, anoushehDetails]
 
+    //return div on button base on selectIndex state
+    const selectedButton = (selectIndex, buttonNumber) => {
+        if(selectIndex === buttonNumber) {
+            return <div className='fillDiv'></div>
+        }
+    }
+
     return (
         <div>
             <div className='crew-header'><strong>02</strong> MEET YOUR CREW</div>
@@ -23,10 +30,10 @@ function Crew(props) {
                 <div className='crew__details'>
 
                     <div className='crew__button-container'>
-                        <button className='crew__button' onClick={() => {props.handleClick(0)}}></button>
-                        <button className='crew__button' onClick={() => {props.handleClick(1)}}></button>
-                        <button className='crew__button' onClick={() => {props.handleClick(2)}}></button>
-                        <button className='crew__button' onClick={() => {props.handleClick(3)}}></button>
+                        <button className='crew__button' onClick={() => {props.handleClick(0)}}>{selectedButton(props.selectIndex, 0)}</button>
+                        <button className='crew__button' onClick={() => {props.handleClick(1)}}>{selectedButton(props.selectIndex, 1)}</button>
+                        <button className='crew__button' onClick={() => {props.handleClick(2)}}>{selectedButton(props.selectIndex, 2)}</button>
+                        <button className='crew__button' onClick={() => {props.handleClick(3)}}>{selectedButton(props.selectIndex, 3)}</button>
                     </div>
 
                     <div className='crew__position'>{crewDetails[props.selectIndex].position}</div>
