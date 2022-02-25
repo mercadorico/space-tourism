@@ -6,7 +6,7 @@ import App from './App';
 import './index.css';
 
 ReactDOM.render(
-        <BrowserRouter basename='space-tourism'>
+        <BrowserRouter basename='space-tourism-netlify'>
             <App />
         </BrowserRouter>,
         document.getElementById("root")
