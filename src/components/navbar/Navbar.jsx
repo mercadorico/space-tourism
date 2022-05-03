@@ -6,12 +6,12 @@ import logo from '../../assets/shared/logo.svg'
 import menu from '../../assets/shared/icon-hamburger.svg';
 import close from '../../assets/shared/icon-close.svg';
 
-function Menu(props) {
+function Menu({resetState, setNavState}) {
 
     const handleNavbarClick = (navClass) => {
         // set nav state by getting the class of clicked nav link
-        props.resetState();
-        props.setNavState(navClass);
+        resetState();
+        setNavState(navClass);
     }
 
 
@@ -33,9 +33,9 @@ function Menu(props) {
     );
 }
 
-function Navbar(props) {
+function Navbar({resetState, navState, setNavState}) {
     const [toggleMenu, setToggleMenu] = useState(false); 
-    const [navState, setNavState] = useState('home-bar');
+    
 
     useEffect(() => {
 
@@ -67,7 +67,7 @@ function Navbar(props) {
                 {
                     toggleMenu && (
                         <div className='menu__links--flex-container'>
-                            <Menu resetState={props.resetState} setNavState={setNavState} />
+                            <Menu resetState={resetState} setNavState={setNavState} />
                         </div>              
                     )
                 }
@@ -78,7 +78,7 @@ function Navbar(props) {
                 <hr className='navbar2__hr--flex-item navbar2__hr'/>
                 <div className='nav navbar__nav--blur navbar2__nav--flex-item'>
                     <div className='nav__links nav__links--flex'>
-                        <Menu resetState={props.resetState} setNavState={setNavState} />
+                        <Menu resetState={resetState} setNavState={setNavState} />
                     </div>
                 </div>
             </div>

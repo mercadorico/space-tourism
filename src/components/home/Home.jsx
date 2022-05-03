@@ -1,11 +1,19 @@
 import React from 'react';
 import './home.css';
+import { useNavigate } from 'react-router-dom';
 
-function Home() {
+function Home({setNavState}) {
 
     // Remove class and add new one to render correct background image
     document.body.classList.remove("destination", "crew", "technology");
     document.body.classList.add("home");
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        setNavState('destination-bar')
+        navigate('/destination');
+    }
 
     return (
         <div>
@@ -16,11 +24,9 @@ function Home() {
                     <div className='home__paragraph'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</div>
                 </div>
 
-                <div className='home__explore--flex-container home__explore--flex-item'>
-                    <a href='/space-tourism/destination'>
-                        <div className='home__explore--flex-container2'>EXPLORE</div>
-                    </a>
-                </div>
+                <button className='home__explore--flex-container home__explore--flex-item' onClick={handleClick}>
+                    <div className='home__explore--flex-container2'>EXPLORE</div>
+                </button>
             </div>
         </div>
     )
