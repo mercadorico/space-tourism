@@ -6,12 +6,15 @@ import logo from '../../assets/shared/logo.svg'
 import menu from '../../assets/shared/icon-hamburger.svg';
 import close from '../../assets/shared/icon-close.svg';
 
-function Menu({resetState, setNavState}) {
+function Menu({resetState, setNavState, setToggleMenu}) {
 
     const handleNavbarClick = (navClass) => {
         // set nav state by getting the class of clicked nav link
         resetState();
         setNavState(navClass);
+
+        // if setToggleMenu is passed as props to Menu component i.e. when viewing in mobile.
+        if(setToggleMenu) setToggleMenu(false);
     }
 
 
@@ -46,6 +49,14 @@ function Navbar({resetState, navState, setNavState}) {
         document.body.querySelector('.technology-bar').classList.remove('nav--underline');
         
         document.body.querySelector(`.${navState}`).classList.add('nav--underline');
+
+        document.addEventListener('click', (event) => {
+            // if true exit the function and do not proceed to next line
+            if(event.target.closest('.navbar__menu')) return;
+
+            setToggleMenu(false);
+        })
+
     });
 
     return (
@@ -67,7 +78,7 @@ function Navbar({resetState, navState, setNavState}) {
                 {
                     toggleMenu && (
                         <div className='menu__links--flex-container'>
-                            <Menu resetState={resetState} setNavState={setNavState} />
+                            <Menu resetState={resetState} setNavState={setNavState} setToggleMenu={setToggleMenu} />
                         </div>              
                     )
                 }
