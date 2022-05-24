@@ -1,5 +1,6 @@
 import React from 'react';
 import './crew.css';
+import { motion } from 'framer-motion/dist/framer-motion';
 
 import {douglasDetails, markDetails, victorDetails, anoushehDetails} from './exportDetails';
 
@@ -18,7 +19,7 @@ function Crew(props) {
     }
 
     return (
-        <div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
             <div className='crew-header'><strong>02</strong> MEET YOUR CREW</div>
 
             <div className='crew__body--flex'>
@@ -41,7 +42,7 @@ function Crew(props) {
                     <p className='crew__description'>{crewDetails[props.selectIndex].description}</p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

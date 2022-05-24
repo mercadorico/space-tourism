@@ -1,5 +1,7 @@
 import React from 'react';
 import './technology.css';
+import { motion } from 'framer-motion/dist/framer-motion';
+
 
 import {vehicleDetails, capsuleDetails, portDetails} from './exportDetails';
 
@@ -18,7 +20,7 @@ function Technology(props) {
     }
 
     return (
-        <div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
             <div className='technology__header'><strong>03</strong> SPACE LAUNCH 101</div>
 
             <div className='technology__flex-container'>
@@ -41,7 +43,7 @@ function Technology(props) {
                     <p className='description'>{technologyDetails[props.selectIndex].description}</p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

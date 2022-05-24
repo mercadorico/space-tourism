@@ -1,5 +1,6 @@
 import React from 'react';
 import './destination.css';
+import { motion } from 'framer-motion/dist/framer-motion';
 
 import {moonDetails, marsDetails, europaDetails, titanDetails} from './exportDetails';
 
@@ -19,7 +20,7 @@ function Destination(props) {
     }
 
     return (
-        <div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
             <div className='destination__flex-container'>
                 <div className='destination__header'>
                     <div className='destination__heading'><strong>01</strong>SELECT YOUR DESTINATION</div>
@@ -55,7 +56,7 @@ function Destination(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
