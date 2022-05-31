@@ -4,7 +4,7 @@ import { motion } from 'framer-motion/dist/framer-motion';
 
 import {douglasDetails, markDetails, victorDetails, anoushehDetails} from './exportDetails';
 
-function Crew(props) {
+function Crew({selectIndex, handleClick}) {
     // Remove class and add new one to render correct background image
     document.body.classList.remove("home", "destination", "technology");
     document.body.classList.add("crew");
@@ -24,22 +24,22 @@ function Crew(props) {
 
             <div className='crew__body--flex'>
                 <div className='crew__img--container'>
-                    <img src={crewDetails[props.selectIndex].img} alt='crew-img'/>
+                    <img src={crewDetails[selectIndex].img} alt='crew-img'/>
                     <hr className='crew__hr'></hr>
                 </div>
 
                 <div className='crew__details'>
 
                     <div className='crew__button-container'>
-                        <button className='crew__button' onClick={() => {props.handleClick(0)}}>{selectedButton(props.selectIndex, 0)}</button>
-                        <button className='crew__button' onClick={() => {props.handleClick(1)}}>{selectedButton(props.selectIndex, 1)}</button>
-                        <button className='crew__button' onClick={() => {props.handleClick(2)}}>{selectedButton(props.selectIndex, 2)}</button>
-                        <button className='crew__button' onClick={() => {props.handleClick(3)}}>{selectedButton(props.selectIndex, 3)}</button>
+                        <button className='crew__button' onClick={() => {handleClick(0)}} > {selectedButton(selectIndex, 0)} </button>
+                        <button className='crew__button' onClick={() => {handleClick(1)}} > {selectedButton(selectIndex, 1)} </button>
+                        <button className='crew__button' onClick={() => {handleClick(2)}} > {selectedButton(selectIndex, 2)} </button>
+                        <button className='crew__button' onClick={() => {handleClick(3)}} > {selectedButton(selectIndex, 3)} </button>
                     </div>
 
-                    <div className='crew__position'>{crewDetails[props.selectIndex].position}</div>
-                    <div className='crew__name'>{crewDetails[props.selectIndex].name}</div>
-                    <p className='crew__description'>{crewDetails[props.selectIndex].description}</p>
+                    <div className='crew__position'>{crewDetails[selectIndex].position}</div>
+                    <div className='crew__name'>{crewDetails[selectIndex].name}</div>
+                    <p className='crew__description'>{crewDetails[selectIndex].description}</p>
                 </div>
             </div>
         </motion.div>

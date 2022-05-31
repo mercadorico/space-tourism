@@ -5,7 +5,7 @@ import { motion } from 'framer-motion/dist/framer-motion';
 
 import {vehicleDetails, capsuleDetails, portDetails} from './exportDetails';
 
-function Technology(props) {
+function Technology({selectIndex, handleClick}) {
     // Remove class and add new one to render correct background image
     document.body.classList.remove("home", "crew", "destination");
     document.body.classList.add("technology");
@@ -25,22 +25,22 @@ function Technology(props) {
 
             <div className='technology__flex-container'>
                 <div className='technology__img-container'>
-                    <img className='landscape' src={technologyDetails[props.selectIndex].img_landscape} alt='crew-img'/>
-                    <img className='portrait' src={technologyDetails[props.selectIndex].img_portrait} alt='crew-img'/>
+                    <img className='landscape' src={technologyDetails[selectIndex].img_landscape} alt='crew-img'/>
+                    <img className='portrait' src={technologyDetails[selectIndex].img_portrait} alt='crew-img'/>
                 </div>
                 
                 <div className='button__flex-container'>
-                        <button className='technology__button' onClick={() => {props.handleClick(0)}}>{props.selectIndex === 0 ? selectedButton(props.selectIndex, 0) : 1}</button>
-                        <button className='technology__button' onClick={() => {props.handleClick(1)}}>{props.selectIndex === 1 ? selectedButton(props.selectIndex, 1) : 2}</button>
-                        <button className='technology__button' onClick={() => {props.handleClick(2)}}>{props.selectIndex === 2 ? selectedButton(props.selectIndex, 2) : 3}</button>
+                        <button className='technology__button' onClick={() => {handleClick(0)}}>{selectIndex === 0 ? selectedButton(selectIndex, 0) : 1}</button>
+                        <button className='technology__button' onClick={() => {handleClick(1)}}>{selectIndex === 1 ? selectedButton(selectIndex, 1) : 2}</button>
+                        <button className='technology__button' onClick={() => {handleClick(2)}}>{selectIndex === 2 ? selectedButton(selectIndex, 2) : 3}</button>
                 </div>
 
                 <div className='details__flex-container'>
                     <div className='terminology'>THE TERMINOLOGY...</div>
 
-                    <div className='technology__name'>{technologyDetails[props.selectIndex].name}</div>
+                    <div className='technology__name'>{technologyDetails[selectIndex].name}</div>
 
-                    <p className='description'>{technologyDetails[props.selectIndex].description}</p>
+                    <p className='description'>{technologyDetails[selectIndex].description}</p>
                 </div>
             </div>
         </motion.div>
