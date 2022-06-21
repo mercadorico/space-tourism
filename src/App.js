@@ -6,7 +6,9 @@ import './App.css';
 
 const App = () => {
 
+    // index for each page contents, contents are altered based on the current index
     const [selectIndex, setSelectIndex] = useState(0);
+    // navbar state
     const [navState, setNavState] = useState('home-bar');
 
     const handleClick = (clickedIndex) => {
